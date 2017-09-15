@@ -1,0 +1,43 @@
+body,
+div,
+a {
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+.login-out {
+  width: 100%;
+  height: 100%;
+}
+.login-out {
+  overflow: hidden;
+}
+.login-in {
+  width: 500%;
+  height: 100%;
+  overflow: hidden;
+}
+div {
+  height: 100%;
+}
+.login-img {
+  width: 20%;
+  float: left;
+}
+#login-img1 {
+  background-image: url("img/login1.jpg");
+}
+#login-img2 {
+  background-image: url("img/login2.jpg");
+}
+#login-img3 {
+  background-image: url("img/login3.jpg");
+}
+#login-img4 {
+  background-image: url("img/login4.jpg");
+}
+#login-img5 {
+  background-image: url("img/login5.jpg");
+  position: relative;
+}

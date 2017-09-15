@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-out">
+        <div class="login-in">
+            <div id="login-img1" class="login-img"></div>
+            <div id="login-img2" class="login-img"></div>
+            <div id="login-img3" class="login-img"></div>
+            <div id="login-img4" class="login-img"></div>
+            <a href="index.html"><div id="login-img5" class="login-img"></div></a>
+        </div>
+    </div>
+</body>
+
+<script src="./jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var loginImg = $('.login-img');
+        var loginOut = $(".login-out");
+        var backWidth = loginImg.css("width");
+        var backHeight = loginImg.css("height");
+        var backString = backWidth+ " " + backHeight;
+        var touchStart = 0;
+        loginImg.css("background-size",backString);
+//        取得触摸开始坐标
+        loginImg.on("touchstart",function(e){
+            touchStart = e.originalEvent.targetTouches[0].pageX;
+        });
+//        取得触摸结束坐标
+        loginImg.on("touchend",function(e){
+            var touchEnd = e.originalEvent.changedTouches[0].pageX;
+//            滚动条和屏幕宽度转化成数字
+            var scrollleft = parseInt(loginOut.scrollLeft());
+            var width = parseInt(backWidth.substring(0,3));
+//            判断左右
+            if( (touchStart-touchEnd) > 0 ){
+//                console.log("left");
+                var i = 1;
+                var timer = setInterval(function(){
+                    loginOut.scrollLeft(scrollleft+i);
+                    if( i === width) {
+                        clearInterval(timer);
+                    }
+                    i++;
+                },1);
+            }
+        });
+    });
+</script>
+</html>
