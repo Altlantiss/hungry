@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <title>mine</title>
+    <link rel="stylesheet" href="userlogin.css">
+</head>
+<body>
+    <div class="all">
+        <div class="head">
+            登录
+            <a href="order.html" id="close"><img src="./img/userlogin-close.png" alt="" ></a>
+            <a href="">注册</a>
+        </div>
+        <div class="main">
+            <div class="form">
+                <input type="text" placeholder="手机/邮箱/用户名" name="name" id="name" value="111">
+                <input type="text" placeholder="密码" name="password" id="password">
+                <input id="checked_1" type="checkbox" class="switch" />
+                <label for="checked_1"></label>
+            </div>
+            <div class="btn">
+                <a href="" id="login">登录</a>
+                <a href="" id="forget">忘记密码？</a>
+                <a href="" id="message">短信验证码登录</a>
+            </div>
+        </div>
+        <div class="foot">
+            <span>
+                <a></a>
+                <p>第三方登录</p>
+                <a></a>
+            </span>
+            <div>
+                <a href="">
+                    <img src="./img/userlogin-other1.png" alt="">
+                    <p>微信</p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="./img/userlogin-other2.png" alt="">
+                    <p>QQ</p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="./img/userlogin-other3.png" alt="">
+                    <p>微博</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./jquery-3.2.1.min.js"></script>
+    <script>
+        var label = $("label");
+        var password = $("#password");
+        var inputname = $("#name");
+//        console.log(inputname.val());
+        var login = $("#login");
+        var labelok = 0;
+
+        password.attr("type","password");
+        label.on("click",function(){
+            if(labelok === 0) {
+                labelok = 1;
+                password.attr("type","text");
+            }else{
+                labelok= 0;
+                password.attr("type","password");
+            }
+        });
+        login.on("click",function(){
+            if(inputname.val() === "admin" && password.val() === "123"){
+               console.log("登录成功!")
+            }
+            return false;
+        })
+
+    </script>
+</body>
+</html>

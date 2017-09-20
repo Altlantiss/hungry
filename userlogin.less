@@ -1,0 +1,160 @@
+body,div,img,a,p {
+  margin:0;
+  padding: 0;
+}
+html,body,.all{
+  width: 100%;
+  height: 100%;
+}
+body{
+  background-color: #f0eff4;
+}
+.head {
+  width: 100%;
+  height: 10%;
+  padding: 10px 10px;
+  background-color: #3492ea;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px;
+  color: white;
+  overflow: hidden;
+  img{
+    width: 20px;
+  }
+  a{
+    float: right;
+    color: white;
+  }
+  #close{
+    float: left;
+  }
+}
+
+.form {
+  width: 100%;
+  margin:10px 0;
+  background-color: white;
+  overflow: hidden;
+  border-top: 1px solid #cccccc;
+  border-bottom:1px solid #cccccc;
+  position: relative;
+  input{
+    width: 95%;
+    float: right;
+    border:none;
+    height: 40px;
+  }
+  #name{
+    border-bottom:1px solid #cccccc;
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  #login {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #56d177;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 16px;
+    margin-bottom:10px;
+  }
+  #forget{
+    float: left;
+  }
+  #message{
+    float: right;
+  }
+}
+
+
+.switch{
+  display:none;
+}
+label{
+  position:absolute;
+  right: 10px;
+  bottom:-5px;
+  display: block;
+  padding: 1px;
+  border-radius: 24px;
+  width: 45px;
+  height: 22px;
+  margin-bottom: 15px;
+  background-color: #eee;
+  cursor: pointer;
+  vertical-align: top;
+  -webkit-user-select: none;
+}
+label:before{
+  content: '';
+  display: block;
+  border-radius: 24px;
+  height: 22px;
+  background-color: white;
+  -webkit-transform: scale(1, 1);
+  -webkit-transition: all 0.3s ease;
+}
+label:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -11px;
+  margin-left: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.08);
+  -webkit-transform: translateX(-9px);
+  -webkit-transition: all 0.3s ease;
+}
+.switch:checked~label:after{
+  -webkit-transform: translateX(9px);
+}
+
+.switch:checked~label:before{
+  background-color:green;
+}
+
+.foot {
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+  span {
+    overflow: hidden;
+    display: block;
+    a{
+      width: 39%;
+      height: 1px;
+      margin:9px 0;
+      background-color: #cccccc;
+      float: left;
+    }
+    p{
+      float: left;
+      padding:0 5px;
+    }
+  }
+  div{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    img {
+      width: 55px;
+      margin-bottom: 10px;
+    }
+  }
+
+}
