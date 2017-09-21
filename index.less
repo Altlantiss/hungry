@@ -5,6 +5,9 @@ body,div,a,p,img,ul,li {
 html,body,.all {
   height: 100%;
 }
+ul{
+  list-style: none;
+}
 .head {
   width: 100%;
   height: 10%;
@@ -56,7 +59,7 @@ html,body,.all {
     padding-top: 2%;
     a{
       width: 25%;
-      height: 100px;
+      height: 80px;
       float: left;
       line-height: 50%;
       img{
@@ -74,7 +77,127 @@ html,body,.all {
 
 
   .list {
+    margin-top:10px;
+    margin-bottom: 50px;
+    background-color: white;
+    .nav {
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      padding:15px 0 ;
+      margin-left: -1px;
+      overflow: hidden;
+      div{
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        border-left: 1px solid #cccccc;
+        a{
+          p{
+            display: inherit;
+            color: black;
+          }
+          img{
+            width: 13px;
+          }
+        }
+      }
+    }
+    .merchantlist{
+      width: 100%;
+      padding-left: 10px;
+      //list-style: none;
+      .details{
+        width: 100%;
+        border-bottom: 1px solid #cccccc;
+        overflow: hidden;
+        //list-style: none;
+        img{
+          float: left;
+          width: 70px;
+          margin-left: 10px;
+          margin-top:10px;
+        }
+        div{
+          float: right;
+          width: 75%;
+          ul{
+            width: 100%;
+            li{
+              //width: 100%;
+              overflow: hidden;
+              padding:10px 0;
+              border-bottom: 1px solid #cccccc;
+              margin-right: 10px;
+              margin-bottom: -1px;
+              p{
+                color: #a3a3a3;
+              }
+              span{
+                display: flex;
+                .a{
+                  width: 19px;
+                  height: 19px;
+                  border-radius: 5px;
+                  text-align: center;
+                  line-height: 20px;
+                  color: white;
+                  margin-right: 10px;
+                  margin-bottom: 5px;
+                }
+                .discount{
+                  background-color: #cc22e3;
+                }
+                .deductible{
+                  background-color: #4db7e1;
+                }
+              }
+              div{
+                width: 100%;
+                padding:3px 0;
+                //padding-right: 10px;
 
+              }
+              .left{
+                float: left;
+              }
+              .right{
+                float: right;
+              }
+              .name{
+                font-size: 18px;
+                font-weight: 600;
+                color: black;
+              }
+              .money{
+                color: #dd7542;
+                font-size: 16px;
+                font-weight: 600;
+                padding-right: 5px;
+              }
+              .big{
+                font-size: 18px;
+              }
+              .start{
+                width: 80px;
+                height: 20px;
+                margin-left: 0;
+                margin-top: 0;
+                margin-right: 5px;
+              }
+              .start + p{
+                padding-right: 5px;
+              }
+              .logo{
+                width: 65px;
+                height: 20px;
+                margin-left: 0;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -84,6 +207,7 @@ html,body,.all {
   position: fixed;
   bottom:0;
   overflow: hidden;
+  background-color: white;
   a {
     width: 25%;
     display: block;
