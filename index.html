@@ -93,6 +93,50 @@
                </div>
                <ul class="merchantlist">
                    <li class="details">
+                           <img src="./img/index-listicon1.png" alt="" class="headimg">
+                           <div>
+                               <ul>
+                                   <li>
+                                       <div>
+                                           <p class="left name">必胜客欧尚餐厅</p>
+                                           <span class="right">
+                                           <p class="money big">¥30</p>
+                                           <p>起送</p>
+                                      </span>
+                                       </div>
+                                       <div>
+                                         <span class="left">
+                                           <img src="./img/index-liststart.png" alt="" class="start">
+                                           <p>(53)</p>
+                                           <p>月售167单</p>
+                                         </span>
+                                           <span class="right">
+                                           <p class="money">¥7</p>
+                                           <p>配送费</p>
+                                        </span>
+                                       </div>
+                                       <div>
+                                           <p class="left">2.54千米</p>
+                                           <span class="right">
+                                            <img src="./img/index-listlogo.png" alt="" class="logo">
+                                        </span>
+                                       </div>
+                                   </li>
+                                   <li>
+                                    <span class="left">
+                                        <a class="a discount">减</a>
+                                        <p>满120元减30元</p>
+                                    </span>
+                                       <span class="left">
+                                       <a class="a deductible">抵</a>
+                                       <p>在该商家用抵用券订餐可抵10元</p>
+                                   </span>
+                                   </li>
+                               </ul>
+                           </div>
+                   </li>
+
+                   <li class="details">
                        <img src="./img/index-listicon1.png" alt="" class="headimg">
                        <div>
                            <ul>
@@ -104,31 +148,31 @@
                                            <p>起送</p>
                                       </span>
                                    </div>
-                                    <div>
+                                   <div>
                                          <span class="left">
                                            <img src="./img/index-liststart.png" alt="" class="start">
                                            <p>(53)</p>
                                            <p>月售167单</p>
                                          </span>
-                                        <span class="right">
+                                       <span class="right">
                                            <p class="money">¥7</p>
                                            <p>配送费</p>
                                         </span>
-                                    </div>
-                                    <div>
-                                        <p class="left">2.54千米</p>
-                                        <span class="right">
+                                   </div>
+                                   <div>
+                                       <p class="left">2.54千米</p>
+                                       <span class="right">
                                             <img src="./img/index-listlogo.png" alt="" class="logo">
                                         </span>
-                                    </div>
+                                   </div>
                                </li>
                                <li>
                                     <span class="left">
-                                        <a href="" class="a discount">减</a>
+                                        <a class="a discount">减</a>
                                         <p>满120元减30元</p>
                                     </span>
                                    <span class="left">
-                                       <a href="" class="a deductible">抵</a>
+                                       <a class="a deductible">抵</a>
                                        <p>在该商家用抵用券订餐可抵10元</p>
                                    </span>
                                </li>
@@ -168,55 +212,11 @@
                                </li>
                                <li>
                                     <span class="left">
-                                        <a href="" class="a discount">减</a>
+                                        <a class="a discount">减</a>
                                         <p>满120元减30元</p>
                                     </span>
                                    <span class="left">
-                                       <a href="" class="a deductible">抵</a>
-                                       <p>在该商家用抵用券订餐可抵10元</p>
-                                   </span>
-                               </li>
-                           </ul>
-                       </div>
-                   </li>
-
-                   <li class="details">
-                       <img src="./img/index-listicon1.png" alt="" class="headimg">
-                       <div>
-                           <ul>
-                               <li>
-                                   <div>
-                                       <p class="left name">必胜客欧尚餐厅</p>
-                                       <span class="right">
-                                           <p class="money big">¥30</p>
-                                           <p>起送</p>
-                                      </span>
-                                   </div>
-                                   <div>
-                                         <span class="left">
-                                           <img src="./img/index-liststart.png" alt="" class="start">
-                                           <p>(53)</p>
-                                           <p>月售167单</p>
-                                         </span>
-                                       <span class="right">
-                                           <p class="money">¥7</p>
-                                           <p>配送费</p>
-                                        </span>
-                                   </div>
-                                   <div>
-                                       <p class="left">2.54千米</p>
-                                       <span class="right">
-                                            <img src="./img/index-listlogo.png" alt="" class="logo">
-                                        </span>
-                                   </div>
-                               </li>
-                               <li>
-                                    <span class="left">
-                                        <a href="" class="a discount">减</a>
-                                        <p>满120元减30元</p>
-                                    </span>
-                                   <span class="left">
-                                       <a href="" class="a deductible">抵</a>
+                                       <a class="a deductible">抵</a>
                                        <p>在该商家用抵用券订餐可抵10元</p>
                                    </span>
                                </li>
@@ -269,9 +269,9 @@
                }
            });
 
-
-
-
+           details.on("click",function(){
+               $(window).attr("location","merchantlist.html")
+           });
 
        });
    </script>

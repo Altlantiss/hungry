@@ -1,0 +1,210 @@
+body,div,a,p,img,ul,li {
+  margin:0;
+  padding:0;
+}
+html,body,.all {
+  height: 100%;
+}
+ul{
+  list-style: none;
+}
+.head {
+  width: 100%;
+  height: 10%;
+  padding:20px 10px;
+  background-color: #3492ea;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  a{
+    overflow: hidden;
+    #head1{
+      width: 18px;
+      float: left;
+    }
+    #head2, #head3{
+      width: 27px;
+      float: right;
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  height: 8%;
+  overflow: hidden;
+  position: relative;
+  div {
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+    float: left;
+  }
+  & a{
+    width: 33.33%;
+    height: 5px;
+    background-color: #3492ea;
+    position: absolute;
+    top:48px;
+    left:0;
+  }
+}
+.notice {
+  width: 100%;
+  height: 5%;
+  background-color: #fff8d7;
+  overflow: hidden;
+  padding:10px 0;
+  img,p,a{
+    float: left;
+
+  }
+  p{
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  #head4{
+    width: 15px;
+    margin:0 5px;
+  }
+  #head5{
+    width: 10px;
+  }
+  a{
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    margin-left: 2px;
+    color: white;
+  }
+  .discount{
+    background-color: #cc22e3;
+  }
+  .deductible{
+    background-color: #4db7e1;
+  }
+}
+
+.main{
+  width: 100%;
+  height: 70%;
+  overflow:hidden;
+  .in {
+    width: 300%;
+    height: 100%;
+    div{
+      width: 33.33%;
+      height: 100%;
+      float: left;
+    }
+    .commodity{
+      ul{
+        float: left;
+      }
+      .list{
+        width: 30%;
+        height: 100%;
+        background-color: #efefef;
+        //overflow: hidden;
+        li{
+          width: 100%;
+          height: 11.11%;
+          border-top:1px solid #cccccc;
+          line-height: 51px;
+          div{
+            width: 5%;
+            margin-right: 20px;
+            background-color: transparent;
+          }
+        }
+        .active{
+          background-color: white;
+          div{
+            background-color: #3492ea;
+          }
+        }
+        #start{
+          width: 15px;
+          margin-right: 5px;
+          margin-top: -3px;
+        }
+      }
+      .content{
+        width: 70%;
+        height: 100%;
+        overflow: auto;
+        .category{
+          width: 100%;
+          height: 7%;
+          background-color: #e6e6e6;
+          padding-left: 10px;
+          line-height: 32px;
+          font-weight: 600;
+        }
+        .details{
+          width: 100%;
+          min-height: 30%;
+          overflow: hidden;
+          div{
+            float: left;
+          }
+          .img{
+            width: 30%;
+            height: 100%;
+            .listimg{
+              width: 60px;
+              margin-top: 10px;
+              margin-left: 10px;
+            }
+          }
+          .text{
+            width: 70%;
+            height: 100%;
+            padding-right: 5px;
+            .h1{
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 10px;
+            }
+            .introduce{
+              font-size: 12px;
+            }
+            span{
+              padding: 5px 0;
+              display: block;
+              overflow: hidden;
+              img,p{
+                display: inline-block;
+              }
+              .start{
+                width: 70px;
+                margin-top:-4px;
+              }
+              .add{
+                width: 20px;
+                float: right;
+              }
+              .p{
+                color: #ff6413;
+              }
+              .number{
+                font-size: 18px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+    .evaluate{
+
+    }
+    .business{
+
+    }
+  }
+}
