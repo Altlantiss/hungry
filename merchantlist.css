@@ -1,0 +1,371 @@
+body,
+div,
+a,
+p,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+.all {
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+.head {
+  width: 100%;
+  height: 10%;
+  padding: 20px 10px;
+  background-color: #3492ea;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.head a {
+  overflow: hidden;
+}
+.head a #head1 {
+  width: 18px;
+  float: left;
+}
+.head a #head2,
+.head a #head3 {
+  width: 27px;
+  float: right;
+}
+.nav {
+  width: 100%;
+  height: 8%;
+  overflow: hidden;
+  position: relative;
+}
+.nav div {
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  line-height: 54px;
+  float: left;
+}
+.nav a {
+  width: 33.33%;
+  height: 5px;
+  background-color: #3492ea;
+  position: absolute;
+  top: 48px;
+  left: 0;
+}
+.notice {
+  width: 100%;
+  height: 5%;
+  background-color: #fff8d7;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.notice img,
+.notice p,
+.notice a {
+  float: left;
+}
+.notice p {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.notice #head4 {
+  width: 15px;
+  margin: 0 5px;
+}
+.notice #head5 {
+  width: 10px;
+}
+.notice a {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  margin-left: 2px;
+  color: white;
+}
+.notice .discount {
+  background-color: #cc22e3;
+}
+.notice .deductible {
+  background-color: #4db7e1;
+}
+.main {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.main .in {
+  width: 300%;
+  height: 100%;
+}
+.main .in .commodity,
+.main .in .evaluate,
+.main .in .business {
+  width: 33.33%;
+  height: 100%;
+  float: left;
+}
+.main .in .commodity ul {
+  float: left;
+}
+.main .in .commodity .list {
+  width: 30%;
+  height: 100%;
+  background-color: #efefef;
+}
+.main .in .commodity .list li {
+  width: 100%;
+  height: 11.11%;
+  border-top: 1px solid #cccccc;
+  line-height: 51px;
+}
+.main .in .commodity .list li div {
+  width: 5%;
+  margin-right: 20px;
+  background-color: transparent;
+}
+.main .in .commodity .list .active {
+  background-color: white;
+}
+.main .in .commodity .list .active div {
+  background-color: #3492ea;
+}
+.main .in .commodity .list #start {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.main .in .commodity .content {
+  width: 70%;
+  height: 100%;
+  overflow: auto;
+}
+.main .in .commodity .content .category {
+  width: 100%;
+  height: 7%;
+  background-color: #e6e6e6;
+  padding-left: 10px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.main .in .commodity .content .details {
+  width: 100%;
+  min-height: 30%;
+  overflow: hidden;
+}
+.main .in .commodity .content .details div {
+  float: left;
+}
+.main .in .commodity .content .details .img {
+  width: 30%;
+  height: 100%;
+}
+.main .in .commodity .content .details .img .listimg {
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.main .in .commodity .content .details .text {
+  width: 70%;
+  height: 100%;
+  padding-right: 5px;
+}
+.main .in .commodity .content .details .text .h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.main .in .commodity .content .details .text .introduce {
+  font-size: 12px;
+}
+.main .in .commodity .content .details .text span {
+  padding: 5px 0;
+  display: block;
+  overflow: hidden;
+}
+.main .in .commodity .content .details .text span img,
+.main .in .commodity .content .details .text span p {
+  display: inline-block;
+}
+.main .in .commodity .content .details .text span .start {
+  width: 70px;
+  margin-top: -4px;
+}
+.main .in .commodity .content .details .text span .add {
+  width: 20px;
+  float: right;
+}
+.main .in .commodity .content .details .text span .p {
+  color: #ff6413;
+}
+.main .in .commodity .content .details .text span .number {
+  font-size: 18px;
+}
+.main .in .evaluate {
+  min-height: 110%;
+  background-color: #efefef;
+}
+.main .in .evaluate .praise {
+  width: 100%;
+  height: 12%;
+  float: none;
+  padding: 10px;
+  background-color: white;
+}
+.main .in .evaluate .praise .left {
+  width: 30%;
+}
+.main .in .evaluate .praise .right {
+  width: 70%;
+  border-left: 1px solid #cccccc;
+}
+.main .in .evaluate .praise div {
+  height: 100%;
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+.main .in .evaluate .praise div .big {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f46700;
+}
+.main .in .evaluate .praise div span {
+  display: block;
+  padding: 3px 0;
+}
+.main .in .evaluate .praise div span img {
+  width: 90px;
+  margin-top: -5px;
+}
+.main .in .evaluate .praise div span p {
+  display: inline-block;
+  color: #f46700;
+  font-weight: 600;
+}
+.main .in .evaluate .list {
+  width: 100%;
+  min-height: 90%;
+  background-color: white;
+  margin-top: 10px;
+}
+.main .in .evaluate .list .screen {
+  width: 100%;
+  height: 13%;
+  padding: 15px 0;
+  overflow: hidden;
+  background-color: white;
+}
+.main .in .evaluate .list .screen a {
+  width: auto;
+  float: left;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-left: 15px;
+  color: black;
+}
+.main .in .evaluate .list .screen a img {
+  width: 20px;
+  margin-top: -2px;
+  margin-right: 3px;
+}
+.main .in .evaluate .list .screen .active {
+  color: white;
+  background-color: #3492ea;
+}
+.main .in .evaluate .list .content {
+  width: 100%;
+  height: 7%;
+  background-color: white;
+  overflow: hidden;
+  padding: 3px 15px;
+  border-bottom: 1px solid #cccccc;
+}
+.main .in .evaluate .list .content img {
+  width: 20px;
+  float: left;
+}
+.main .in .evaluate .list .content p {
+  float: left;
+}
+.main .in .evaluate .list ul {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  list-style: none;
+  padding-left: 10px;
+}
+.main .in .evaluate .list ul li {
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px solid #cccccc;
+  padding-right: 10px;
+}
+.main .in .evaluate .list ul li div {
+  overflow: hidden;
+  padding: 10px 0;
+}
+.main .in .evaluate .list ul li div .start {
+  width: 90px;
+}
+.main .in .evaluate .list ul li div .headimg {
+  float: right;
+  width: 30px;
+}
+.main .in .evaluate .list ul li div .icon {
+  float: left;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.main .in .evaluate .list ul li div p {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  min-height: auto;
+}
+.main .in .evaluate .list ul li div .time {
+  float: left;
+  padding-right: 20px;
+  color: #bdbdbd;
+}
+.main .in .evaluate .list ul li div .Specifications {
+  float: left;
+  color: #bdbdbd;
+}
+.main .in .evaluate .list ul li p {
+  min-height: 50px;
+}
+.foot {
+  width: 100%;
+  height: 7%;
+  background-color: #3d3d3d;
+  overflow: hidden;
+  color: white;
+  padding: 10px;
+}
+.foot div {
+  display: -webkit-box;
+  float: left;
+}
+.foot div img {
+  width: 30px;
+  padding-right: 5px;
+}
+.foot div p {
+  font-size: 20px;
+}
+.foot span {
+  display: -webkit-box;
+  float: right;
+  font-size: 20px;
+}

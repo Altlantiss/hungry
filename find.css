@@ -1,0 +1,168 @@
+body,
+div,
+a,
+p,
+img {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.all {
+  width: 100%;
+  height: 100%;
+}
+.head {
+  width: 100%;
+  height: 10%;
+  padding: 10px 10px;
+  background-color: #3492ea;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px;
+  color: white;
+}
+.main {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.main .nav {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+.main .nav a {
+  color: #000;
+}
+.main .nav div {
+  padding: 10px;
+}
+.main .nav img {
+  width: 70px;
+}
+.main .nav .big {
+  font-size: 20px;
+  font-weight: 600;
+}
+.main .nav .nav-shop {
+  width: 40%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #dcdcdc;
+  display: inherit;
+  text-align: center;
+}
+.main .nav .nav-shop img {
+  margin-top: 10px;
+}
+.main .nav .nav-shop div {
+  padding: 0;
+}
+.main .nav .nav-shop .big {
+  color: #e87379;
+}
+.main .nav .nav-eat {
+  width: 60%;
+  height: 50%;
+  float: right;
+  border-bottom: 1px solid #dcdcdc;
+  display: inherit;
+}
+.main .nav .nav-eat img {
+  float: right;
+}
+.main .nav .nav-eat div {
+  float: left;
+  padding: 0;
+}
+.main .nav .nav-eat .big {
+  color: #6cde22;
+}
+.main .nav .nav-nearby {
+  width: 60%;
+  height: 50%;
+  float: right;
+}
+.main .nav .nav-nearby img {
+  float: right;
+}
+.main .nav .nav-nearby div {
+  float: left;
+  padding: 0;
+}
+.main .nav .nav-nearby .big {
+  color: #559cd4;
+}
+.main .list {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  background-color: white;
+  padding: 20px 0 ;
+}
+.main .list p {
+  font-size: 20px;
+  display: inline;
+  padding-left: 5px;
+}
+.main .list a {
+  float: right;
+  color: #dcdcdc;
+  font-size: 16px;
+  padding-right: 5px;
+}
+.main .list .time-limit {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+.main .list .time-limit div {
+  width: 50%;
+  height: 50%;
+  float: left;
+  padding: 5px 5px 0 5px;
+  text-align: center;
+  overflow: hidden;
+}
+.main .list .time-limit div a {
+  color: #000;
+  padding-right: 0;
+}
+.main .list .time-limit div img {
+  width: 100%;
+}
+.main .list .time-limit div p {
+  font-size: 15px;
+  padding-left: 5px;
+}
+.main .list .time-limit div span {
+  float: left;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.main .list .time-limit div span img {
+  width: 20px;
+}
+.main .list .time-limit div span p {
+  color: #e17865;
+  font-weight: 600;
+}
+.foot {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+.foot a {
+  width: 25%;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #9d9d9d;
+}
+.foot a img {
+  width: 30px;
+}
