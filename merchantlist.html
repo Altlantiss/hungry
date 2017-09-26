@@ -856,11 +856,130 @@
                         </li>
                     </ul>
                 </div>
-                <div class="evaluate"></div>
-                <div class="business"></div>
+                <div class="evaluate">
+                    <div class="praise">
+                        <div class="left">
+                            <p class="big">91%</p>
+                            <p>好评率</p>
+                        </div>
+                        <div class="right">
+                            <span>
+                                服务态度
+                                <img src="./img/index-liststart.png" alt="">
+                                <p>4.8</p>
+                            </span>
+                            <span>
+                                菜品评分
+                                <img src="./img/index-liststart.png" alt="">
+                                <p>4.8</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="screen">
+                            <a href="" class="active">全部(10)</a>
+                            <a href=""><img src="./img/evaluate-icon1.png" alt="">满意(8)</a>
+                            <a href=""><img src="./img/evaluate-icon2.png" alt="">不满意(2)</a>
+                            <a href="">有图(5)</a>
+                        </div>
+                        <div class="content">
+                            <img src="./img/evaluate-icon3.png" alt="">
+                            <p>只看有内容的评价</p>
+                        </div>
+                        <ul>
+                            <li class="yes">
+                                <div>
+                                    <img src="./img/index-liststart.png" alt="" class="start">
+                                    <img src="./img/evaluate-headimg.png" alt="" class="headimg">
+                                    <p>3***a</p>
+                                </div>
+                                <p>满意</p>
+                                <div>
+                                    <p class="time">2015-10-22 15:33</p>
+                                    <img src="./img/evaluate-icon4.png" alt="" class="icon">
+                                    <p class="Specifications">超级至尊披萨(普通装铁盘)<p>
+                                </div>
+                            </li>
+                            <li class="no img">
+                                <div>
+                                    <img src="./img/index-liststart.png" alt="" class="start">
+                                    <img src="./img/evaluate-headimg.png" alt="" class="headimg">
+                                    <p>3***a</p>
+                                </div>
+                                <p>不满意</p>
+                                <div>
+                                    <p class="time">2015-10-22 19:33</p>
+                                    <img src="./img/evaluate-icon4.png" alt="" class="icon">
+                                    <p class="Specifications">浓情烤翅(标准份)<p>
+                                </div>
+                            </li>
+                            <li class="yes">
+                                <div>
+                                    <img src="./img/index-liststart.png" alt="" class="start">
+                                    <img src="./img/evaluate-headimg.png" alt="" class="headimg">
+                                    <p>3***a</p>
+                                </div>
+                                <p>满意</p>
+                                <div>
+                                    <p class="time">2015-10-22 15:33</p>
+                                    <img src="./img/evaluate-icon4.png" alt="" class="icon">
+                                    <p class="Specifications">超级至尊披萨(普通装铁盘)<p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="business">
+
+                </div>
             </div>
         </div>
-        <div class="foot"></div>
+        <div class="foot">
+            <div>
+                <img src="./img/merchantlist-shopcar.png" alt="">
+                <p>¥</p>
+                <p>0</p>
+            </div>
+            <span>
+                <p>¥</p>
+                <p>30</p>
+                起送
+            </span>
+        </div>
     </div>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        var label = $(".nav>div");
+        var page = $(".in>div");
+        var notice = $(".notice");
+        var foot = $(".foot");
+        var main = $(".main");
+
+        var slider = $(".nav>a");
+//        console.log(label.width());
+        label.on("click",function(){
+           page.eq($(this).index()).css("display","block");
+           page.eq($(this).index()).siblings().css("display","none");
+
+           if( $(this).attr("class") === "commodity" ) {
+               notice.show();
+               foot.show();
+               main.css("height","70%");
+           }
+           if( $(this).attr("class") === "evaluate" ) {
+                notice.hide();
+                foot.hide();
+                main.css("height","100%");
+           }
+//           if( $(this).attr("class") === "business" ) {
+//
+//           }
+            slider.css("left",label.width()*$(this).index());
+            slider.css("transition","left 0.5s");
+
+        });
+    </script>
 </body>
 </html>
