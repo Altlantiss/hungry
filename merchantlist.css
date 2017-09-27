@@ -199,9 +199,18 @@ ul {
   width: 70px;
   margin-top: -4px;
 }
-.main .in .commodity .content .details .text span .add {
+.main .in .commodity .content .details .text span .add,
+.main .in .commodity .content .details .text span .reduce,
+.main .in .commodity .content .details .text span .single {
   width: 20px;
   float: right;
+}
+.main .in .commodity .content .details .text span .reduce,
+.main .in .commodity .content .details .text span .single {
+  display: none;
+}
+.main .in .commodity .content .details .text span .reduce {
+  margin-right: 10px;
 }
 .main .in .commodity .content .details .text span .p {
   color: #ff6413;
@@ -345,17 +354,161 @@ ul {
 .main .in .evaluate .list ul li p {
   min-height: 50px;
 }
+.main .in .business {
+  background-color: #efefef;
+}
+.main .in .business .details {
+  width: 100%;
+  background-color: white;
+}
+.main .in .business .details .intelligence {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+}
+.main .in .business .details .intelligence div {
+  padding: 10px 15px;
+  float: left;
+}
+.main .in .business .details .intelligence div #logo {
+  width: 60px;
+}
+.main .in .business .details .intelligence div #liststart {
+  width: 65px;
+}
+.main .in .business .details .intelligence div #collection {
+  width: 45px;
+}
+.main .in .business .details .intelligence div #first {
+  font-size: 18px;
+  font-weight: 600;
+}
+.main .in .business .details .intelligence div span {
+  display: block;
+}
+.main .in .business .details .intelligence div span p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 100;
+  color: #8f8f8f;
+}
+.main .in .business .details .intelligence div span #hungry {
+  font-size: 15px;
+  color: black;
+}
+.main .in .business .details .intelligence div:last-child {
+  float: right;
+  text-align: center;
+}
+.main .in .business .details .intelligence div:last-child p {
+  margin-top: 10px;
+}
+.main .in .business .details .distribution {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 0;
+}
+.main .in .business .details .distribution div {
+  width: 33.33%;
+  padding: 5px 10px;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #cccccc;
+  margin-left: -1px;
+}
+.main .in .business .details .distribution div p {
+  padding-bottom: 5px;
+}
+.main .in .business .details .distribution div span {
+  display: block;
+}
+.main .in .business .details .distribution div span p {
+  display: inline-block;
+}
+.main .in .business .details .distribution div span .big {
+  font-size: 18px;
+  font-weight: 600;
+}
+.main .in .business .notices {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #c7521c;
+}
+.main .in .business .notices div {
+  padding: 5px 0;
+}
+.main .in .business .notices div:last-child {
+  padding-right: 10px;
+  border-top: 1px solid #cccccc;
+}
+.main .in .business .security {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.main .in .business .security div {
+  padding: 10px 0;
+}
+.main .in .business .security div:first-child {
+  border-bottom: 1px solid #cccccc;
+  overflow: hidden;
+}
+.main .in .business .security div:first-child a {
+  float: right;
+  color: #7c7c7c;
+  padding-right: 10px;
+}
+.main .in .business .security div:last-child {
+  overflow: hidden;
+}
+.main .in .business .security div:last-child #smile {
+  width: 50px;
+  float: left;
+  margin: 10px;
+}
+.main .in .business .security div:last-child div {
+  float: left;
+}
+.main .in .business .security div:last-child div span {
+  padding-bottom: 10px;
+  display: block;
+}
+.main .in .business .security div:last-child div span p {
+  padding-left: 5px;
+  display: inline-block;
+}
+.main .in .business .security div:last-child div span #good {
+  color: #7ed320;
+}
+.main .in .business .other {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.main .in .business .other div {
+  padding: 10px 0;
+}
+.main .in .business .other div a {
+  color: black;
+}
+.main .in .business .other div:first-child {
+  border-bottom: 1px solid #cccccc;
+}
 .foot {
   width: 100%;
   height: 7%;
   background-color: #3d3d3d;
   overflow: hidden;
   color: white;
-  padding: 10px;
 }
 .foot div {
   display: -webkit-box;
   float: left;
+  padding: 10px;
 }
 .foot div img {
   width: 30px;
@@ -368,4 +521,15 @@ ul {
   display: -webkit-box;
   float: right;
   font-size: 20px;
+  padding: 10px;
+}
+.foot a {
+  width: 73.38px;
+  height: 100%;
+  color: white;
+  background-color: #00c000;
+  float: right;
+  text-align: center;
+  line-height: 46px;
+  display: none;
 }

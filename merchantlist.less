@@ -186,9 +186,15 @@ ul{
                 width: 70px;
                 margin-top:-4px;
               }
-              .add{
+              .add, .reduce, .single{
                 width: 20px;
                 float: right;
+              }
+              .reduce, .single{
+                display: none;
+              }
+              .reduce{
+                margin-right:10px;
               }
               .p{
                 color: #ff6413;
@@ -346,7 +352,156 @@ ul{
 
 
     .business{
+      background-color: #efefef;
+      .details{
+        width: 100%;
+        //height: 20%;
+        background-color: white;
+        .intelligence{
+          width: 100%;
+          overflow: hidden;
+          border-bottom: 1px solid #cccccc;
+          div{
+            padding:10px 15px;
+            float: left;
+            #logo{
+              width: 60px;
+            }
+            #liststart{
+              width: 65px;
+            }
+            #collection{
+              width: 45px;
+            }
+           #first{
+              font-size: 18px;
+              font-weight:600;
+            }
+            span{
+              display: block;
+              p{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 100;
+                color: #8f8f8f;
+              }
+              #hungry{
+                font-size: 15px;
+                color: black;
+              }
+            }
+          }
+          div:last-child{
+            float: right;
+            text-align: center;
+            p{
+              margin-top: 10px;
+            }
+          }
+        }
+        .distribution{
+          width: 100%;
+          overflow: hidden;
+          padding:5px 0;
+          div{
+            width: 33.33%;
+            padding:5px 10px;
+            float: left;
+            text-align: center;
+            border-left: 1px solid #cccccc;
+            margin-left: -1px;
+            p{
+              padding-bottom:5px;
+            }
+            span{
+              display: block;
+              p{
+                display: inline-block;
+              }
+              .big{
+                font-size: 18px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
 
+
+      .notices{
+        width: 100%;
+        background-color: white;
+        margin-top:10px;
+        padding-left:10px;
+        color: #c7521c;
+        div{
+          padding:5px 0;
+        }
+        div:last-child{
+          padding-right: 10px;
+          border-top:1px solid #cccccc;
+        }
+      }
+
+
+      .security{
+        width: 100%;
+        background-color: white;
+        margin-top:10px;
+        padding-left:10px;
+        div{
+          padding:10px 0;
+        }
+        div:first-child{
+          border-bottom: 1px solid #cccccc;
+          overflow: hidden;
+          a{
+            float: right;
+            color: #7c7c7c;
+            padding-right:10px;
+          }
+        }
+        div:last-child{
+          overflow: hidden;
+          #smile{
+            width: 50px;
+            float: left;
+            margin:10px;
+          }
+          div{
+            float: left;
+            span{
+              padding-bottom: 10px;
+              display: block;
+              p{
+                padding-left:5px;
+                display: inline-block;
+              }
+              #good{
+                color: #7ed320;
+              }
+            }
+          }
+
+        }
+      }
+
+
+      .other{
+        width: 100%;
+        background-color: white;
+        margin-top:10px;
+        padding-left:10px;
+        div{
+          padding:10px 0;
+          a{
+            color: black;
+          }
+        }
+        div:first-child{
+          border-bottom: 1px solid #cccccc;
+        }
+      }
     }
   }
 }
@@ -357,11 +512,11 @@ ul{
   background-color: rgba(61,61,61,1);
   overflow: hidden;
   color: white;
-  padding:10px;
   //display: none;   //调试
   div{
     display: -webkit-box;
     float: left;
+    padding:10px;
     img{
       width: 30px;
       padding-right: 5px;
@@ -374,5 +529,16 @@ ul{
     display: -webkit-box;
     float: right;
     font-size: 20px;
+    padding:10px;
+  }
+  a{
+    width: 73.38px;
+    height: 100%;
+    color:white;
+    background-color: #00c000;
+    float: right;
+    text-align: center;
+    line-height: 46px;
+    display: none;
   }
 }
