@@ -83,7 +83,7 @@
                                 <img src="./img/merchantlist-listimg.png" alt="" class="listimg">
                             </div>
                             <div class="text">
-                                <p class="h1">匈牙利风情牛肉焗饭</p>
+                                <p class="h1">希腊风情海鲜烩饭</p>
                                 <p class="introduce">精选香嫩牛肉，经匈牙利风味腌料腌制并闷煮入味，肉质酥软，再将经典匈牙利风味酱汁淋与米饭，辅以莫扎里拉芝士焗烤后，牛肉鲜香柔嫩，酱汁醇厚，浓郁匈牙利风情美味，口口难忘。</p>
                                 <span>
                                     <img src="./img/merchantlist-liststart.png" alt="" class="start">
@@ -107,7 +107,7 @@
                                 <img src="./img/merchantlist-listimg.png" alt="" class="listimg">
                             </div>
                             <div class="text">
-                                <p class="h1">匈牙利风情牛肉焗饭</p>
+                                <p class="h1">欧式培根炒饭</p>
                                 <p class="introduce">精选香嫩牛肉，经匈牙利风味腌料腌制并闷煮入味，肉质酥软，再将经典匈牙利风味酱汁淋与米饭，辅以莫扎里拉芝士焗烤后，牛肉鲜香柔嫩，酱汁醇厚，浓郁匈牙利风情美味，口口难忘。</p>
                                 <span>
                                     <img src="./img/merchantlist-liststart.png" alt="" class="start">
@@ -131,7 +131,7 @@
                                 <img src="./img/merchantlist-listimg.png" alt="" class="listimg">
                             </div>
                             <div class="text">
-                                <p class="h1">匈牙利风情牛肉焗饭</p>
+                                <p class="h1">意式飘香肉丸芝士焗饭</p>
                                 <p class="introduce">精选香嫩牛肉，经匈牙利风味腌料腌制并闷煮入味，肉质酥软，再将经典匈牙利风味酱汁淋与米饭，辅以莫扎里拉芝士焗烤后，牛肉鲜香柔嫩，酱汁醇厚，浓郁匈牙利风情美味，口口难忘。</p>
                                 <span>
                                     <img src="./img/merchantlist-liststart.png" alt="" class="start">
@@ -1085,6 +1085,70 @@
                         </div>
                     </div>
                 </div>
+                <div class="confirm">
+                    <div class="address">
+                        请填写地址
+                        <img src="./img/confirm-location.png" alt="" id="location">
+                        <img src="./img/mine-listicon.png" alt="">
+                    </div>
+                    <div class="bg"></div>
+                    <div class="payment">
+                        <div>
+                            <span>
+                                在线支付
+                                <p>(商家仅支持在线支付)</p>
+                            </span>
+                            <span>
+                                <a>微信支付抽乐视会员卡</a>
+                                <a>立减8.00元</a>
+                            </span>
+                        </div>
+                        <div>
+                            <img src="./img/evaluate-icon3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div>
+                            送达时间
+                            <img src="./img/mine-listicon.png" alt="">
+                            <p>尽快送达</p>
+                        </div>
+                        <div>
+                            订单备注
+                            <img src="./img/mine-listicon.png" alt="">
+                            <p>点击添加备注</p>
+                        </div>
+                        <div>
+                            发票抬头
+                            <p>商家不支持开发票</p>
+                        </div>
+                    </div>
+                    <div class="voucher">
+                        抵价券
+                        <p>商家不支持抵价券</p>
+                    </div>
+                    <div class="details">
+                       <ul>
+                           <li class="food">
+                               <p class="name">营养培根熟菜</p>
+                               <p class="money">¥32</p>
+                               <p class="number">x 2</p>
+                           </li>
+                           <li class="text">
+                               <p>配送费</p>
+                               <p class="left">本订单由【必胜客欧尚餐厅】提供配送</p>
+                               <p class="right">0</p>
+                               <p class="right">¥</p>
+                           </li>
+                           <li class="text">
+                               <p>在线支付立减优惠</p>
+                               <p class="left">限每天两单</p>
+                               <p class="right">8</p>
+                               <p class="right">- ¥</p>
+                           </li>
+                       </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="foot">
@@ -1109,6 +1173,7 @@
         var notice = $(".notice");
         var foot = $(".foot");
         var main = $(".main");
+        var nav = $(".nav");
 
         var slider = $(".nav>a");
 
@@ -1125,7 +1190,7 @@
         var single = $(".single");
         var reduce = $(".reduce");
 
-
+        var confirm = $(".confirm");
 //        console.log(hidefull);
         //分页切换
         label.on("click",function(){
@@ -1173,7 +1238,7 @@
            }
         });
 
-        //下单
+        //增加
         var intnumber;
         var intsingle;
         var intsummoney = parseInt(summoney.html());
@@ -1181,7 +1246,6 @@
         add.on("click",function(){
             intnumber = parseInt($(this).siblings(".number").html());
             intsingle = parseInt($(this).siblings(".single").html());
-            console.log($(this).siblings(".single"));
             intsummoney = intsummoney + intnumber;
             summoney.html(intsummoney);
             $(this).siblings(".brother").show();
@@ -1191,7 +1255,12 @@
                 hidefull.hide();
                 showfull.show();
             }
+
+            $(this).siblings(".single").addClass("active");
+
+
         });
+        //减少
         reduce.on("click",function(){
             intnumber = parseInt($(this).siblings(".number").html());
             intsingle = parseInt($(this).siblings(".single").html());
@@ -1207,6 +1276,37 @@
                 $(this).siblings(".brother").hide();
                 $(this).hide();
             }
+        });
+        //去下单
+        showfull.on("click",function(){
+
+            var q = $(".text .active");
+            var arrname = [];
+            var arrsingle = [];
+            var arrmoney = [];
+            for(var i=0; i<q.length; i++) {
+                arrname.push(q.eq(i).parent().siblings(".h1").html());
+                arrsingle.push(q.eq(i).html());
+                arrmoney.push( parseInt(q.eq(i).siblings(".number").html())*parseInt(q.eq(i).html()) );
+            }
+//            console.log(arrname);
+//            console.log(arrsingle);
+//            console.log(arrmoney);
+//            console.log(q.length);
+
+            confirm.siblings().hide();
+            nav.hide();
+            notice.hide();
+            main.css("height","100%");
+            foot.css("position","fixed");
+            foot.css("bottom","0");
+
+            var food = $(".food");
+            for(var j =0;j<q.length; j++) {
+                food.clone(true).insertAfter(food);
+            }
+
+            return false;
         });
 
     </script>

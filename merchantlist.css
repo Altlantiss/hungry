@@ -103,13 +103,14 @@ ul {
   overflow: hidden;
 }
 .main .in {
-  width: 300%;
+  width: 400%;
   height: 100%;
 }
 .main .in .commodity,
 .main .in .evaluate,
-.main .in .business {
-  width: 33.33%;
+.main .in .business,
+.main .in .confirm {
+  width: 25%;
   height: 100%;
   float: left;
 }
@@ -497,6 +498,156 @@ ul {
 }
 .main .in .business .other div:first-child {
   border-bottom: 1px solid #cccccc;
+}
+.main .in .confirm {
+  background-color: #efefef;
+}
+.main .in .confirm .address {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  padding: 10px;
+}
+.main .in .confirm .address img {
+  float: right;
+  width: 15px;
+}
+.main .in .confirm .address #location {
+  float: left;
+  margin-right: 10px;
+}
+.main .in .confirm .bg {
+  width: 100%;
+  height: 7px;
+  background-image: url("img/confirm-bg.png");
+  background-repeat: repeat-x;
+}
+.main .in .confirm .payment {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.main .in .confirm .payment div:first-child {
+  float: left;
+}
+.main .in .confirm .payment div:first-child span:first-child {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main .in .confirm .payment div:first-child span:first-child p {
+  color: #9d9d9d;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 100;
+}
+.main .in .confirm .payment div:first-child span:last-child a {
+  color: white;
+  padding: 1px;
+}
+.main .in .confirm .payment div:first-child span:last-child a:first-child {
+  background-color: #1090e7;
+}
+.main .in .confirm .payment div:first-child span:last-child a:last-child {
+  background-color: #ff0335;
+}
+.main .in .confirm .payment div:last-child {
+  float: right;
+  line-height: 45px;
+}
+.main .in .confirm .payment div:last-child img {
+  width: 25px;
+}
+.main .in .confirm .option {
+  width: 100%;
+  background-color: white;
+  padding: 0 0 0 10px ;
+  margin-top: 10px;
+}
+.main .in .confirm .option div {
+  padding: 10px 10px 10px 0;
+  font-size: 18px;
+  overflow: hidden;
+  font-weight: 600;
+}
+.main .in .confirm .option div img {
+  float: right;
+  width: 15px;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+.main .in .confirm .option div p {
+  float: right;
+  font-size: 16px;
+  color: #7c7c7c;
+  font-weight: 100;
+}
+.main .in .confirm .option div:first-child {
+  border-bottom: 1px solid #cccccc;
+}
+.main .in .confirm .option div:last-child {
+  border-top: 1px solid #cccccc;
+  color: #cccccc;
+  font-size: 16px;
+  font-weight: 100;
+}
+.main .in .confirm .option div:last-child p {
+  color: #cccccc;
+}
+.main .in .confirm .voucher {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+  color: #cccccc;
+  font-size: 16px;
+}
+.main .in .confirm .voucher p {
+  float: right;
+}
+.main .in .confirm .details {
+  width: 100%;
+  background-color: white;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+.main .in .confirm .details ul {
+  width: 100%;
+  list-style: none;
+}
+.main .in .confirm .details ul li {
+  border-top: 1px solid #cccccc;
+  padding: 10px 10px 10px 0;
+}
+.main .in .confirm .details ul li:first-child {
+  border-top: none;
+}
+.main .in .confirm .details ul .text {
+  color: #e77124;
+  overflow: hidden;
+}
+.main .in .confirm .details ul .text .left {
+  float: left;
+  color: #cccccc;
+}
+.main .in .confirm .details ul .text .right {
+  float: right;
+}
+.main .in .confirm .details ul .food {
+  overflow: hidden;
+}
+.main .in .confirm .details ul .food .name {
+  float: left;
+}
+.main .in .confirm .details ul .food .money,
+.main .in .confirm .details ul .food .number {
+  float: right;
+}
+.main .in .confirm .details ul .food .number {
+  padding-right: 20px;
 }
 .foot {
   width: 100%;

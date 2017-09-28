@@ -95,10 +95,10 @@ ul{
   //height: 100%;        //评价页面
   overflow:hidden;
   .in {
-    width: 300%;
+    width: 400%;
     height: 100%;
-    .commodity, .evaluate, .business{
-        width: 33.33%;
+    .commodity, .evaluate, .business, .confirm{
+        width: 25%;
         height: 100%;
         float: left;
     }
@@ -503,6 +503,161 @@ ul{
         }
       }
     }
+
+    .confirm {
+      background-color: #efefef;
+      .address{
+        width: 100%;
+        background-color: white;
+        overflow: hidden;
+        padding:10px;
+        img{
+          float: right;
+          width: 15px;
+        }
+        #location{
+          float: left;
+          margin-right:10px;
+        }
+      }
+      .bg{
+        width: 100%;
+        height: 7px;
+        background-image: url("./img/confirm-bg.png");
+        background-repeat: repeat-x;
+      }
+      .payment{
+        width: 100%;
+        background-color: white;
+        padding:10px;
+        margin-top: 10px;
+        overflow: hidden;
+        div:first-child{
+          float: left;
+         
+          span:first-child{ 
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            p{
+              color: #9d9d9d;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 100;
+            }
+          }
+          span:last-child{
+            a{
+              color: white;
+              padding:1px;
+            }
+            a:first-child{
+              background-color: #1090e7;
+            }
+            a:last-child{
+              background-color: #ff0335;
+            }
+          }
+        }
+        div:last-child{
+          float: right;
+          line-height: 45px;
+          img{
+            width: 25px;
+          }
+        }
+      }
+      .option{
+        width: 100%;
+        background-color: white;
+        padding:0 0 0 10px ;
+        margin-top:10px;
+        div{
+          padding:10px 10px 10px 0;
+          font-size: 18px;
+          overflow: hidden;
+          font-weight:600;
+          img{
+            float: right;
+            width: 15px;
+            margin-left: 10px;
+            margin-top: -2px;
+
+          }
+          p{
+            float: right;
+            font-size: 16px;
+            color: #7c7c7c;
+            font-weight: 100;
+          }
+        }
+        div:first-child{
+          border-bottom: 1px solid #cccccc;
+        }
+        div:last-child{
+          border-top: 1px solid #cccccc;
+          color: #cccccc;
+          font-size: 16px;
+          font-weight: 100;
+          p{
+            color: #cccccc;
+          }
+        }
+      }
+      .voucher{
+        width: 100%;
+        background-color: white;
+        margin-top:10px;
+        padding:10px;
+        overflow: hidden;
+        color: #cccccc;
+        font-size: 16px;
+        p{
+          float: right;
+        }
+      }
+      .details{
+        width: 100%;
+        background-color: white;
+        padding-left:10px;
+        margin:10px 0;
+        ul{
+          width: 100%;
+          list-style: none;
+          li{
+            border-top: 1px solid #cccccc;
+            padding:10px 10px 10px 0;
+          }
+          li:first-child{
+            border-top: none;
+          }
+          .text{
+            color: #e77124;
+            overflow: hidden;
+            .left{
+              float: left;
+              color: #cccccc;
+            }
+            .right{
+              float: right;
+            }
+          }
+          .food{
+            overflow: hidden;
+            .name{
+              float: left;
+            }
+            .money, .number{
+              float: right;
+            }
+            .number{
+              padding-right:20px;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 
