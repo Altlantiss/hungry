@@ -81,6 +81,9 @@ ul {
   margin-top: 10px;
   margin-bottom: 50px;
   background-color: white;
+  width: 100%;
+  position: absolute;
+  top: 320px;
 }
 .main .list .nav {
   border-top: 1px solid #cccccc;
@@ -176,9 +179,10 @@ ul {
 }
 .main .list .merchantlist .details div ul li .big {
   font-size: 18px;
+  margin-top: -2px;
 }
 .main .list .merchantlist .details div ul li .start {
-  width: 80px;
+  width: 90px;
   height: 20px;
   margin-left: 0;
   margin-top: 0;
@@ -192,6 +196,46 @@ ul {
   height: 20px;
   margin-left: 0;
   margin-top: 0;
+}
+.main .list .classification {
+  width: 50%;
+  background-color: white;
+  overflow: hidden;
+  float: left;
+  margin-top: -1px;
+  display: none;
+}
+.main .list .classification li {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  border-top: 1px solid #cccccc;
+}
+.main .list .classification li p:first-child {
+  float: left;
+}
+.main .list .classification li p:last-child {
+  float: right;
+  color: #636363;
+}
+.main .list .classification .active {
+  background-color: white;
+}
+.main .list .second {
+  width: 50%;
+  float: right;
+  margin-top: -1px;
+  display: none;
+}
+.main .list .second li {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  border-top: 1px solid #cccccc;
+}
+.main .list .second li p:first-child {
+  float: left;
 }
 .foot {
   width: 100%;

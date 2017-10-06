@@ -963,35 +963,9 @@
                                 <div>
                                     <img src="./img/index-liststart.png" alt="" class="start">
                                     <img src="./img/evaluate-headimg.png" alt="" class="headimg">
-                                    <p>3***a</p>
+                                    <p class="name">3***a</p>
                                 </div>
-                                <p>满意</p>
-                                <div>
-                                    <p class="time">2015-10-22 15:33</p>
-                                    <img src="./img/evaluate-icon4.png" alt="" class="icon">
-                                    <p class="Specifications">超级至尊披萨(普通装铁盘)<p>
-                                </div>
-                            </li>
-                            <li class="no img">
-                                <div>
-                                    <img src="./img/index-liststart.png" alt="" class="start">
-                                    <img src="./img/evaluate-headimg.png" alt="" class="headimg">
-                                    <p>3***a</p>
-                                </div>
-                                <p>不满意</p>
-                                <div>
-                                    <p class="time">2015-10-22 19:33</p>
-                                    <img src="./img/evaluate-icon4.png" alt="" class="icon">
-                                    <p class="Specifications">浓情烤翅(标准份)<p>
-                                </div>
-                            </li>
-                            <li class="yes">
-                                <div>
-                                    <img src="./img/index-liststart.png" alt="" class="start">
-                                    <img src="./img/evaluate-headimg.png" alt="" class="headimg">
-                                    <p>3***a</p>
-                                </div>
-                                <p>满意</p>
+                                <p class="comment">满意</p>
                                 <div>
                                     <p class="time">2015-10-22 15:33</p>
                                     <img src="./img/evaluate-icon4.png" alt="" class="icon">
@@ -1191,7 +1165,7 @@
         var reduce = $(".reduce");
 
         var confirm = $(".confirm");
-//        console.log(hidefull);
+//        console.log(li);
         //分页切换
         label.on("click",function(){
            page.eq($(this).index()).css("display","block");
@@ -1204,7 +1178,7 @@
            if( $(this).attr("class") === "evaluate" ) {
                 notice.hide();
                 foot.hide();
-                main.css("height","100%");
+                main.css("height","auto");
            }
            if( $(this).attr("class") === "business" ) {
                notice.hide();
@@ -1256,7 +1230,7 @@
                 showfull.show();
             }
 
-            $(this).siblings(".single").addClass("active");
+            $(this).siblings(".single").addClass("active"); //给当前点击的内容添加额外的类
 
 
         });
@@ -1278,22 +1252,19 @@
             }
         });
         //去下单
+        var arrname = [];
+        var arrsingle = [];
+        var arrmoney = [];
+        var foodname = $(".food .name");
+        var foodnumber = $(".food .number");
+        var foodmoney = $(".food .money");
         showfull.on("click",function(){
-
-            var q = $(".text .active");
-            var arrname = [];
-            var arrsingle = [];
-            var arrmoney = [];
-            for(var i=0; i<q.length; i++) {
+            var q = $(".text .active"); //取到所有被点击过的内容
+            for(var i=0; i<q.length; i++) {  //遍历这个内容的父类里所包含的信息
                 arrname.push(q.eq(i).parent().siblings(".h1").html());
                 arrsingle.push(q.eq(i).html());
                 arrmoney.push( parseInt(q.eq(i).siblings(".number").html())*parseInt(q.eq(i).html()) );
             }
-//            console.log(arrname);
-//            console.log(arrsingle);
-//            console.log(arrmoney);
-//            console.log(q.length);
-
             confirm.siblings().hide();
             nav.hide();
             notice.hide();
@@ -1301,14 +1272,72 @@
             foot.css("position","fixed");
             foot.css("bottom","0");
 
-            var food = $(".food");
-            for(var j =0;j<q.length; j++) {
-                food.clone(true).insertAfter(food);
+            var food = $("ul .food");
+            var clonefood = food;
+            for(var j = 0; j< q.length; j++) {
+                if( j === 0) {
+                    //当只选择了一个东西的时候，不克隆直接修改内容
+                    foodname.html(arrname[j]);
+                    foodnumber.html("x "+arrsingle[j]);
+                    foodmoney.html("¥"+arrmoney[j]);
+                }else{
+                    clonefood.clone(true).insertAfter(food.eq(food.length-1)); //永远只复制一个内容并且插入到food的最后
+                    food = $(".food");  //刷新克隆以后的节点内容
+                    foodname = $(".food .name");
+                    foodnumber = $(".food .number");
+                    foodmoney = $(".food .money");
+                    foodname.eq(j).html(arrname[j]);
+                    foodnumber.eq(j).html("x "+arrsingle[j]);
+                    foodmoney.eq(j).html("¥"+arrmoney[j]);
+                }
             }
-
             return false;
         });
+        //接口
+        var html = $.ajax({
+            url:"http://localhost:5500/comment",
+            dataType:"json",
+            async:false,
+            success:function(data){
+                window.data = data; //存入全局变量
+            }
+        });
+        var startarr = ["./img/star0.png","./img/star1.png","./img/star2.png","./img/star3.png","./img/star4.png","./img/star5.png"];
+        if( data.length > 0 ) {
+            for(var i= 1; i< 10 && i< data.length; i++ ) {
+                var evaluate = $(".list ul li");
+                var lastevaluate = evaluate.eq(evaluate.length - 1);
+                lastevaluate.clone(true).appendTo(evaluate.parent());
+                evaluate = $(".list ul li");
+                lastevaluate =evaluate.eq(evaluate.length - 1);
+            }
+            for(var j= 0;j < evaluate.length; j++) {
+                var username = $(".yes .name");
+                var time = $(".time");
+                var start = $(".yes .start");
+                var comment = $(".yes .comment");
+                var item = $(".yes .Specifications");
+                var date = new Date(parseInt(data[j].date)); //取得服务器时间戳并格式化
+                var year = date.getFullYear();
+                var month = date.getMonth()+1;
+                var day = date.getDate();
+                var patt = /[差评]./g; //正则匹配评论内容中是否含有差评
+                username.eq(j).html(data[j].name.substring(0,1)+"****"+data[j].name.substring(data[j].name.length-1,data[j].name.length)); //保留字符串开头和结尾，中间用*代替
+                time.eq(j).html(year+"-"+month+"-"+day);
+                start.eq(j).attr("src",startarr[data[j].star]);
+                if(data[j].comment.match(patt) === null ){   //没有匹配返回值为null
+                    comment.eq(j).html(data[j].comment);
+                }else{
+                    comment.eq(j).html(data[j].comment.replace(patt,"**"))  //匹配到则替换匹配内容
+                }
 
+                if(data[j].item.length >15) {
+                    item.eq(j).html(data[j].item.substring(0,15)+"...");  //字数大于限制时用省略号显示
+                }else{
+                    item.eq(j).html(data[j].item);
+                }
+            }
+        }
     </script>
 </body>
 </html>

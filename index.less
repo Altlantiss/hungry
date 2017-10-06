@@ -80,6 +80,9 @@ ul{
     margin-top:10px;
     margin-bottom: 50px;
     background-color: white;
+    width: 100%;
+    position: absolute;
+    top:320px;
     .nav {
       border-top: 1px solid #cccccc;
       border-bottom: 1px solid #cccccc;
@@ -177,9 +180,10 @@ ul{
               }
               .big{
                 font-size: 18px;
+                margin-top: -2px;
               }
               .start{
-                width: 80px;
+                width: 90px;
                 height: 20px;
                 margin-left: 0;
                 margin-top: 0;
@@ -196,6 +200,46 @@ ul{
               }
             }
           }
+        }
+      }
+    }
+    .classification{
+      width: 50%;
+      background-color: white;
+      overflow: hidden;
+      float: left;
+      margin-top:-1px;
+      display: none;
+      li{
+        width: 100%;
+        padding:10px;
+        overflow: hidden;
+        background-color: #cccccc;
+        border-top: 1px solid #cccccc;
+        p:first-child{
+          float: left;
+        }
+        p:last-child{
+          float: right;
+          color: #636363;
+        }
+      }
+      .active{
+        background-color: white;
+      }
+    }
+    .second{
+      width: 50%;
+      float: right;
+      margin-top: -1px;
+      display: none;
+      li{
+        width: 100%;
+        padding:10px;
+        overflow: hidden;
+        border-top: 1px solid #cccccc;
+        p:first-child{
+          float: left;
         }
       }
     }
