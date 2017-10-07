@@ -1139,7 +1139,6 @@
             <a href="">去结算</a>
         </div>
     </div>
-
     <script src="jquery-3.2.1.min.js"></script>
     <script>
         var label = $(".nav>div");
@@ -1148,24 +1147,19 @@
         var foot = $(".foot");
         var main = $(".main");
         var nav = $(".nav");
-
         var slider = $(".nav>a");
-
         var li = $(".list>li");
         var content = $(".commodity .content");
         var category = $(".category");
-
         var number = $(".number");
         var add = $(".add");
         var summoney = $(".foot div p:last-child");
         var full = $(".full");
         var hidefull = $(".foot span");
         var showfull = $(".foot a");
-        var single = $(".single");
+//        var single = $(".single");
         var reduce = $(".reduce");
-
         var confirm = $(".confirm");
-//        console.log(li);
         //分页切换
         label.on("click",function(){
            page.eq($(this).index()).css("display","block");
@@ -1188,19 +1182,14 @@
             slider.css("left",label.width()*$(this).index());
             slider.css("transition","left 0.5s");
         });
-
         //菜单列表
         var offset = category.offset().top ;
-//        console.log(offset);
         li.on("click",function() {
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
             var a = category.eq( $(this).index() ).offset().top;
-//            console.log(a);
             content.scrollTop(a-offset+content.scrollTop());
-//            console.log(category.eq( $(this).index() ).offset().top);
         });
-
         //滑动
         content.on("scroll",function(){
            for( var i = 0; i < category.length; i++ ){
@@ -1211,7 +1200,6 @@
                }
            }
         });
-
         //增加
         var intnumber;
         var intsingle;
@@ -1229,10 +1217,7 @@
                 hidefull.hide();
                 showfull.show();
             }
-
             $(this).siblings(".single").addClass("active"); //给当前点击的内容添加额外的类
-
-
         });
         //减少
         reduce.on("click",function(){
@@ -1258,39 +1243,43 @@
         var foodname = $(".food .name");
         var foodnumber = $(".food .number");
         var foodmoney = $(".food .money");
+        var showfullok = 0;
         showfull.on("click",function(){
-            var q = $(".text .active"); //取到所有被点击过的内容
-            for(var i=0; i<q.length; i++) {  //遍历这个内容的父类里所包含的信息
-                arrname.push(q.eq(i).parent().siblings(".h1").html());
-                arrsingle.push(q.eq(i).html());
-                arrmoney.push( parseInt(q.eq(i).siblings(".number").html())*parseInt(q.eq(i).html()) );
-            }
-            confirm.siblings().hide();
-            nav.hide();
-            notice.hide();
-            main.css("height","100%");
-            foot.css("position","fixed");
-            foot.css("bottom","0");
-
-            var food = $("ul .food");
-            var clonefood = food;
-            for(var j = 0; j< q.length; j++) {
-                if( j === 0) {
-                    //当只选择了一个东西的时候，不克隆直接修改内容
-                    foodname.html(arrname[j]);
-                    foodnumber.html("x "+arrsingle[j]);
-                    foodmoney.html("¥"+arrmoney[j]);
-                }else{
-                    clonefood.clone(true).insertAfter(food.eq(food.length-1)); //永远只复制一个内容并且插入到food的最后
-                    food = $(".food");  //刷新克隆以后的节点内容
-                    foodname = $(".food .name");
-                    foodnumber = $(".food .number");
-                    foodmoney = $(".food .money");
-                    foodname.eq(j).html(arrname[j]);
-                    foodnumber.eq(j).html("x "+arrsingle[j]);
-                    foodmoney.eq(j).html("¥"+arrmoney[j]);
+            if( showfullok === 0 ) {
+                var q = $(".text .active"); //取到所有被点击过的内容
+                for(var i=0; i<q.length; i++) {  //遍历这个内容的父类里所包含的信息
+                    arrname.push(q.eq(i).parent().siblings(".h1").html());
+                    arrsingle.push(q.eq(i).html());
+                    arrmoney.push( parseInt(q.eq(i).siblings(".number").html())*parseInt(q.eq(i).html()) );
                 }
+                confirm.siblings().hide();
+                nav.hide();
+                notice.hide();
+                main.css("height","auto");
+                foot.css("position","fixed");
+                foot.css("bottom","0");
+                var food = $("ul .food");
+                var clonefood = food;
+                for(var j = 0; j< q.length; j++) {
+                    if( j === 0) {
+                        //当只选择了一个东西的时候，不克隆直接修改内容
+                        foodname.html(arrname[j]);
+                        foodnumber.html("x "+arrsingle[j]);
+                        foodmoney.html("¥"+arrmoney[j]);
+                    }else{
+                        clonefood.clone(true).insertAfter(food.eq(food.length-1)); //永远只复制一个内容并且插入到food的最后
+                        food = $(".food");  //刷新克隆以后的节点内容
+                        foodname = $(".food .name");
+                        foodnumber = $(".food .number");
+                        foodmoney = $(".food .money");
+                        foodname.eq(j).html(arrname[j]);
+                        foodnumber.eq(j).html("x "+arrsingle[j]);
+                        foodmoney.eq(j).html("¥"+arrmoney[j]);
+                    }
+                }
+                showfull.html("确认下单")
             }
+            showfullok = 1;
             return false;
         });
         //接口
@@ -1330,7 +1319,6 @@
                 }else{
                     comment.eq(j).html(data[j].comment.replace(patt,"**"))  //匹配到则替换匹配内容
                 }
-
                 if(data[j].item.length >15) {
                     item.eq(j).html(data[j].item.substring(0,15)+"...");  //字数大于限制时用省略号显示
                 }else{

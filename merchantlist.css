@@ -682,5 +682,6 @@ ul {
   float: right;
   text-align: center;
   line-height: 46px;
+  text-decoration: none;
   display: none;
 }
