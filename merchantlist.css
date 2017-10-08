@@ -501,6 +501,7 @@ ul {
 }
 .main .in .confirm {
   background-color: #efefef;
+  margin-bottom: 50px;
 }
 .main .in .confirm .address {
   width: 100%;

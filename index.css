@@ -108,6 +108,7 @@ ul {
 .main .list .merchantlist {
   width: 100%;
   padding-left: 10px;
+  margin-bottom: 50px;
 }
 .main .list .merchantlist .details {
   width: 100%;
